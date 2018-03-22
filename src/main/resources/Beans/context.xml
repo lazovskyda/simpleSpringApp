@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd "
+
+       default-lazy-init="true"
+>
+
+    <import resource="db_context.xml"/>
+    <import resource="sony.xml"/>
+
+    <bean id="t1000" class="com.lazovsky.lessons.simpleSpringApp.impls.robot.T1000"
+          scope="prototype"
+          parent="baseModel"
+    >
+        <constructor-arg ref="sonyHead" index="0"/>
+        <constructor-arg ref="sonyHand" index="1"/>
+        <constructor-arg ref="sonyLegs" index="2"/>
+        <constructor-arg value="2018" index="3" type="int"/>
+        <constructor-arg value="silver" index="4" type="java.lang.String"/>
+        <constructor-arg value="true" index="5" type="boolean"/>
+
+        <!--<constructor-arg ref="sonyHand"/>-->
+        <!--<constructor-arg ref="sonyHead"/>-->
+        <!--<constructor-arg ref="sonyLegs"/>-->
+
+        <property name="head" ref="sonyHead"/>
+        <property name="hand" ref="sonyHand"/>
+        <property name="leg" ref="sonyLegs"/>
+
+
+        <property name="color" value="red"/>
+        <property name="year" value="2020"/>
+        <property name="soundEnable" value="false"/>
+
+
+    </bean>
+
+    <bean id="t1000Empty" class="com.lazovsky.lessons.simpleSpringApp.impls.robot.T1000"
+          depends-on="dbConnection"
+    >
+        <!--<constructor-arg value="2018" index="0" type="int"/>-->
+        <!--<constructor-arg value="silver" index="1" type="java.lang.String"/>-->
+        <!--<constructor-arg value="true" index="2" type="boolean"/>-->
+
+        <constructor-arg ref="sonyHead"/>
+        <constructor-arg ref="sonyHand"/>
+        <constructor-arg ref="sonyLegs"/>
+
+        <!--<property name="hand" ref="sonyHand"/>-->
+        <!--<property name="head" ref="sonyHead"/>-->
+        <!--<property name="leg" ref="sonyLegs"/>-->
+
+    </bean>
+
+    <bean id="baseModel">
+        <constructor-arg ref="sonyHead" index="0"/>
+        <constructor-arg ref="sonyHand" index="1"/>
+        <constructor-arg ref="sonyLegs" index="2"/>
+    </bean>
+    <bean id="basicInit">
+        <constructor-arg value="2018" index="3" type="int"/>
+        <constructor-arg value="silver" index="4" type="java.lang.String"/>
+        <constructor-arg value="true" index="5" type="boolean"/>
+    </bean>
+    <!--<bean id="preprocessing" class="com.lazovsky.lessons.simpleSpringApp.helpers.MyBeanPostprocessor"/>-->
+
+</beans>
