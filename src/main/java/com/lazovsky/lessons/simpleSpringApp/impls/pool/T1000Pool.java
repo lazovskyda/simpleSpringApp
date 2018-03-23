@@ -10,6 +10,11 @@ public class T1000Pool implements RobotPool {
 
     private Map<String, Robot> robotCollection;
 
+    public T1000Pool(Map<String, Robot> robotCollection){
+        this.robotCollection = robotCollection;
+    }
+
+
     @Override
     public Map<String, Robot> getRobotCollection() {
         return robotCollection;

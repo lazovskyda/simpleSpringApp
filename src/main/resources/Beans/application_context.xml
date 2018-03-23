@@ -11,9 +11,10 @@
 
 
     <bean id="t1000Pool" class="com.lazovsky.lessons.simpleSpringApp.impls.pool.T1000Pool">
-        <property name="robotCollection">
 
 
+
+        <constructor-arg>
             <map>
                 <entry key="A">
                     <ref bean="t1000"/>
@@ -24,35 +25,56 @@
                 <entry key="C">
                     <ref bean="t1000"/>
                 </entry>
+                <entry key="C">
+                    <ref bean="t1000"/>
+                </entry>
             </map>
+        </constructor-arg>
+
+
+
+        <!--<property name="robotCollection">-->
+
+
+            <!--<map>-->
+                <!--<entry key="A">-->
+                    <!--<ref bean="t1000"/>-->
+                <!--</entry>-->
+                <!--<entry key="B">-->
+                    <!--<ref bean="t1000"/>-->
+                <!--</entry>-->
+                <!--<entry key="C">-->
+                    <!--<ref bean="t1000"/>-->
+                <!--</entry>-->
+            <!--</map>-->
 
 
 
 
 
-            <!--<list>-->
-                <!--<ref bean="t1000"/>-->
-                <!--<bean id="t10002" class="com.lazovsky.lessons.simpleSpringApp.impls.robot.T1000"-->
-                      <!--parent="baseModel"-->
-                      <!--scope="prototype">-->
+            <!--&lt;!&ndash;<list>&ndash;&gt;-->
+                <!--&lt;!&ndash;<ref bean="t1000"/>&ndash;&gt;-->
+                <!--&lt;!&ndash;<bean id="t10002" class="com.lazovsky.lessons.simpleSpringApp.impls.robot.T1000"&ndash;&gt;-->
+                      <!--&lt;!&ndash;parent="baseModel"&ndash;&gt;-->
+                      <!--&lt;!&ndash;scope="prototype">&ndash;&gt;-->
 
 
-                    <!--<constructor-arg ref="sonyHead" index="0"/>-->
-                    <!--<constructor-arg ref="sonyHand" index="1"/>-->
-                    <!--<constructor-arg ref="sonyLegs" index="2"/>-->
-                    <!--<constructor-arg value="1985" index="3" type="int"/>-->
-                    <!--<constructor-arg value="gold" index="4" type="java.lang.String"/>-->
-                    <!--<constructor-arg value="true" index="5" type="boolean"/>-->
+                    <!--&lt;!&ndash;<constructor-arg ref="sonyHead" index="0"/>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<constructor-arg ref="sonyHand" index="1"/>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<constructor-arg ref="sonyLegs" index="2"/>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<constructor-arg value="1985" index="3" type="int"/>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<constructor-arg value="gold" index="4" type="java.lang.String"/>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<constructor-arg value="true" index="5" type="boolean"/>&ndash;&gt;-->
 
-                <!--</bean>-->
+                <!--&lt;!&ndash;</bean>&ndash;&gt;-->
 
 
-                <!--<ref bean="t1000"/>-->
-                <!--<ref bean="t1000"/>-->
-                <!--<ref bean="t1000"/>-->
+                <!--&lt;!&ndash;<ref bean="t1000"/>&ndash;&gt;-->
+                <!--&lt;!&ndash;<ref bean="t1000"/>&ndash;&gt;-->
+                <!--&lt;!&ndash;<ref bean="t1000"/>&ndash;&gt;-->
 
-            <!--</list>-->
-        </property>
+            <!--&lt;!&ndash;</list>&ndash;&gt;-->
+        <!--</property>-->
 
     </bean>
 
