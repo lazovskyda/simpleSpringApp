@@ -31,15 +31,18 @@ public class SimpleSpringAppApplication {
 
 
         t1000Pool.action();
-        //System.out.println(t1000Pool.getRobotCollection());
-        t1000Pool.getRobotCollection().forEach(robot -> {
-                    T1000 test = new T1000();
-                    System.out.println(robot);
-                    test = (T1000) robot;
-                    System.out.println( test.getColor() );
 
-                }
-        );
+
+
+        //System.out.println(t1000Pool.getRobotCollection());
+//        t1000Pool.getRobotCollection().forEach(robot -> {
+//                    T1000 test = new T1000();
+//                    System.out.println(robot);
+//                    test = (T1000) robot;
+//                    System.out.println( test.getColor() );
+//
+//                }
+//        );
 
         T1000 firstRobot = (T1000) context.getBean("t1000");
         System.out.println(firstRobot);
