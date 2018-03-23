@@ -10,7 +10,7 @@ public class T1000 extends BaseModel {
     private int year;
     private boolean soundEnable;
 
-    T1000() {
+    public T1000() {
         System.out.println("T100 model constructor");
     }
 

@@ -9,6 +9,8 @@
     <import resource="db_context.xml"/>
     <import resource="sony.xml"/>
 
+    <bean id="actionReplacer" class="com.lazovsky.lessons.simpleSpringApp.impls.robot.ActionReplacer"/>
+
     <bean id="t1000" class="com.lazovsky.lessons.simpleSpringApp.impls.robot.T1000"
           scope="prototype"
           parent="baseModel"
@@ -20,9 +22,10 @@
         <constructor-arg value="silver" index="4" type="java.lang.String"/>
         <constructor-arg value="true" index="5" type="boolean"/>
 
-        <!--<constructor-arg ref="sonyHand"/>-->
-        <!--<constructor-arg ref="sonyHead"/>-->
-        <!--<constructor-arg ref="sonyLegs"/>-->
+
+
+        <replaced-method name="action" replacer="actionReplacer"/>
+
 
         <property name="head" ref="sonyHead"/>
         <property name="hand" ref="sonyHand"/>
