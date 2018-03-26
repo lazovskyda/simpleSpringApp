@@ -4,9 +4,9 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-<bean id="sonyHand" class="com.lazovsky.lessons.simpleSpringApp.impls.sony.SonyHand"/>
-<bean id="sonyLegs" class="com.lazovsky.lessons.simpleSpringApp.impls.sony.SonyLegs"/>
-<bean id="sonyHead" class="com.lazovsky.lessons.simpleSpringApp.impls.sony.SonyHead"/>
+    <bean id="toshibaHand" class="com.lazovsky.lessons.simpleSpringApp.impls.toshiba.ToshibaHand"/>
+    <bean id="toshibaLegs" class="com.lazovsky.lessons.simpleSpringApp.impls.toshiba.ToshibaLegs"/>
+    <bean id="toshibaHead" class="com.lazovsky.lessons.simpleSpringApp.impls.toshiba.ToshibaHead"/>
 
 
 </beans>

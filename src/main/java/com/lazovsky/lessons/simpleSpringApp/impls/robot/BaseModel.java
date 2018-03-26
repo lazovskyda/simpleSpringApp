@@ -5,11 +5,17 @@ import com.lazovsky.lessons.simpleSpringApp.interfaces.Hand;
 import com.lazovsky.lessons.simpleSpringApp.interfaces.Head;
 import com.lazovsky.lessons.simpleSpringApp.interfaces.Leg;
 import com.lazovsky.lessons.simpleSpringApp.interfaces.Robot;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public abstract class BaseModel implements Robot{
 
+    @Autowired
     private Head head;
+
+    @Autowired
     private Hand hand;
+
+    @Autowired
     private Leg leg;
 
 
