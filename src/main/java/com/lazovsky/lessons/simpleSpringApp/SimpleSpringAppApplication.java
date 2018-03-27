@@ -15,13 +15,16 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class SimpleSpringAppApplication {
 
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("Beans/application_context.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("Beans/all_context.xml");
 
         T1000 t1000 = (T1000) context.getBean("t1000");
-
+        T1000 t2000 = (T1000) context.getBean("t2000");
 
         t1000.action();
         t1000.dance();
+
+        t2000.action();
+        t2000.dance();
 
     }
 }
