@@ -4,7 +4,7 @@ import com.lazovsky.lessons.simpleSpringApp.interfaces.Leg;
 import org.springframework.stereotype.Component;
 
 
-
+@Component
 public class ToshibaLegs implements Leg {
     @Override
     public void go() {

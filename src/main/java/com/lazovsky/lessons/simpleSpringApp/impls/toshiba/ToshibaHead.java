@@ -3,7 +3,7 @@ package com.lazovsky.lessons.simpleSpringApp.impls.toshiba;
 import com.lazovsky.lessons.simpleSpringApp.interfaces.Head;
 import org.springframework.stereotype.Component;
 
-
+@Component
 public class ToshibaHead implements Head {
     @Override
     public void think() {

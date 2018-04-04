@@ -11,12 +11,15 @@ import org.springframework.beans.factory.annotation.Qualifier;
 public abstract class BaseModel implements Robot{
 
     @Autowired
+    @Qualifier("toshibaHead")
     private Head head;
 
     @Autowired
+    @Qualifier("toshibaHand")
     private Hand hand;
 
     @Autowired
+    @Qualifier("toshibaLegs")
     private Leg leg;
 
 
